@@ -10,6 +10,12 @@
 "category": "Technology"
 },
 {
+"category": "corona virus"
+},
+{
+"category": "covid-19"
+},
+{
 "category": "Sports"
 },
 {
@@ -40,6 +46,9 @@
 "category": "Elon musk"
 },
 {
+"category": "f1"
+},
+{
 "category": "Automobile"
 },
 {
@@ -47,8 +56,5 @@
 },
 {
 "category": "iphone"
-},
-{
-"category": "f1"
 }
 ]
