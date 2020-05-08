@@ -38,7 +38,7 @@
 
 var request = new XMLHttpRequest()
 var apikey = "4c0e168fd8b44dd4b06c4521d4e5b2d2";
-request.open('GET', 'https://newsapi.org/v2/everything?language=en&q='+category+'&sortBy=publishedAt&apiKey='+apikey, true);
+request.open('GET', 'https://newsapi.org/v2/everything?language=en&q='+category+'&pageSize=50&sortBy=publishedAt&apiKey='+apikey, true);
 request.onload = function() {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
