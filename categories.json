@@ -1,19 +1,13 @@
 
 [
 {
-"category": "Latest news"
+"category": "World"
 },
 {
 "category": "Business"
 },
 {
 "category": "Technology"
-},
-{
-"category": "corona virus"
-},
-{
-"category": "covid-19"
 },
 {
 "category": "Sports"
@@ -44,9 +38,6 @@
 },
 {
 "category": "Elon musk"
-},
-{
-"category": "f1"
 },
 {
 "category": "Automobile"
