@@ -12,6 +12,9 @@ body{
 
 
 }
+p>a{
+  word-break: break-word;
+}
 #refresh{
   float: right;
   cursor: pointer;
