@@ -37,12 +37,14 @@
 		app.appendChild(container)
 
 var request = new XMLHttpRequest()
-var apikey = "4c0e168fd8b44dd4b06c4521d4e5b2d2";
-request.open('GET', 'https://newsapi.org/v2/everything?language=en&q='+category+'&pageSize=50&sortBy=publishedAt&apiKey='+apikey, true);
+var apikey = "0ECt45onptn7-gwFrzfhRc6NO20gRNPrGqtZ8pY9R4PDx_m2";
+
+//request.open('GET', 'https://newsapi.org/v2/everything?language=en&q='+category+'&pageSize=50&sortBy=publishedAt&apiKey='+apikey, true);
+request.open('GET', 'https://api.currentsapi.services/v1/search?keywords='+category+'&apiKey='+apikey, true);
 request.onload = function() {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
-  var articles = data.articles;
+  var articles = data.news;
 
   if (request.status >= 200 && request.status < 400) {
     console.log(data);
@@ -76,10 +78,10 @@ request.onload = function() {
 
       const img = document.createElement('img')
 
-      if(articles.urlToImage==null){
+      if(articles.image=="None"){
       	img.setAttribute('src', "default.png")
       }else{
-      	img.setAttribute('src', articles.urlToImage)
+      	img.setAttribute('src', articles.image)
       }
       
 
@@ -90,7 +92,7 @@ request.onload = function() {
       p.textContent = articles.description;
 
       const a = document.createElement('a')
-      a.innerHTML = "<br>Read more on "+articles.source.name;
+      a.innerHTML = "<br>Read more on "+articles.url;
       a.setAttribute('href', articles.url)
 	    a.setAttribute('target', "_blank")
 
